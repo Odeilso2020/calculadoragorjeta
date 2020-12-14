@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">calculadoraGorjeta</string>
+    <string name="hintValorConta">Valor da conta</string>
+</resources>
