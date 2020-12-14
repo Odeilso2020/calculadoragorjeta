@@ -11,7 +11,7 @@
     <EditText
         android:id="@+id/valorConta"
         android:layout_width="match_parent"
-        android:layout_height="62dp"
+        android:layout_height="79dp"
         android:ems="10"
         android:hint="@string/hintValorConta"
         android:inputType="number" />
@@ -22,4 +22,20 @@
         android:layout_height="37dp"
         android:max="30"
         android:progress="15" />
+
+    <EditText
+        android:id="@+id/valorGorjeta"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:ems="10"
+        android:hint="@string/hintValorGorjeta"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/valorTotal"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:ems="10"
+        android:hint="@string/hintValorTotal"
+        android:inputType="number" />
 </LinearLayout>
