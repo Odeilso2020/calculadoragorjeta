@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView valorContaTextView; // Mostra o valor da conta
     private TextView valorGorjetaTextView; // Mostra o valor da gorjeta
     private TextView valorTotalTextView; // Mostra o valor da conta total calculada
+    private TextView valorPorcentagem; // Mostra a porcentagem em relação a gorjeta
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         valorContaTextView = (TextView)findViewById(R.id.valorConta);
         valorTotalTextView = (TextView)findViewById(R.id.valorTotal);
         valorGorjetaTextView = (TextView)findViewById(R.id.valorGorjeta);
+        valorPorcentagem = (TextView)findViewById(R.id.porcentagemValor);
 
         // Zerando
         valorTotalTextView.setText(currencyFormat.format(0));
@@ -49,9 +51,10 @@ public class MainActivity extends AppCompatActivity {
         try{
             double gorjeta = vrConta * percent;
             double total = vrConta + gorjeta;
+            int porcentagem = (int) ((percent * 10000) / 30);
             valorTotalTextView.setText(currencyFormat.format(total));
             valorGorjetaTextView.setText((currencyFormat.format(gorjeta)));
-            // %
+            valorPorcentagem.setText(porcentagem + " %");
         }catch (Exception ex){
             String y = ex.getMessage();
         }

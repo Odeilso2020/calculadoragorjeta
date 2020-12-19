@@ -16,12 +16,25 @@
         android:hint="@string/hintValorConta"
         android:inputType="number" />
 
-    <SeekBar
-        android:id="@+id/porcentagemBar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="37dp"
-        android:max="30"
-        android:progress="15" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <SeekBar
+            android:id="@+id/porcentagemBar"
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:max="30"
+            android:progress="15"
+            android:layout_weight="100"/>
+
+        <TextView
+            android:id="@+id/porcentagemValor"
+            android:layout_width="wrap_content"
+            android:layout_height="79dp"
+            android:text="%"
+            android:textSize="36sp" />
+    </LinearLayout>
 
     <EditText
         android:id="@+id/valorGorjeta"
@@ -38,4 +51,6 @@
         android:ems="10"
         android:hint="@string/hintValorTotal"
         android:inputType="number" />
+
+
 </LinearLayout>
